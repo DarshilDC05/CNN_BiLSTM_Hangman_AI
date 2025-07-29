@@ -44,4 +44,4 @@ The final piece was the `guess` function in the main notebook. Instead of a simp
 ---
 
 *This project was completed as a part of the Trexquant AI Challenge.*
-# CNN_BiLSTM_Hangman_AI
+[*Link to the repo*](https://github.com/DarshilDC05/CNN_BiLSTM_Hangman_AI)

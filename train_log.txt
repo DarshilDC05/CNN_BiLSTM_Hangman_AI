@@ -1,0 +1,45 @@
+Using device: cuda
+/home/yoga/anaconda3/envs/pytorch/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+--- Starting Training for Deep Model ---
+Epoch 1/5: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 16869/16869 [23:17<00:00, 12.07it/s]
+Epoch 1 | Train Loss: 1.2435 | Val Loss: 1.1773 | Val Accuracy: 62.52%
+Epoch 2/5: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 16869/16869 [23:20<00:00, 12.04it/s]
+Epoch 2 | Train Loss: 1.1970 | Val Loss: 1.1610 | Val Accuracy: 63.07%
+Epoch 3/5: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 16869/16869 [23:20<00:00, 12.05it/s]
+Epoch 3 | Train Loss: 1.1848 | Val Loss: 1.1525 | Val Accuracy: 63.33%
+Epoch 4/5: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 16869/16869 [23:20<00:00, 12.04it/s]
+Epoch 4 | Train Loss: 1.1771 | Val Loss: 1.1462 | Val Accuracy: 63.53%
+Epoch 5/5: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 16869/16869 [23:22<00:00, 12.03it/s]
+Epoch 5 | Train Loss: 1.1714 | Val Loss: 1.1417 | Val Accuracy: 63.68%
+
+Saving final model and supporting files...
+Training complete!
+
+(pytorch) yoga@Yoga-Pro:~/BITS_Pilani/hangman_ai$ python finetune_model.py 
+Loading massive masked data for fine-tuning...
+Loaded 18182560 total training examples.
+Creating specialized dataset for difficult scenarios (early-game, mid-game, and end-game)...
+Found 4200438 early-game examples.
+Found 4208920 end-game examples.
+Found 10000969 mid-game examples.
+Sampling 5000000 mid-game examples.
+Created a combined specialized fine-tuning set with 8129564 examples.
+Using device: cuda
+Loading pre-trained model weights from 'hangman_bilstm_model.pth'...
+/home/yoga/anaconda3/envs/pytorch/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+
+--- Starting Specialized Fine-Tuning Phase ---
+Fine-Tune Epoch 1/3: 100%|█████████████████████████████████████████████████████████████████████████████████████████| 7543/7543 [10:30<00:00, 11.97it/s]
+Fine-Tune Epoch 1 | Train Loss: 0.9624 | Val Loss: 0.9294 | Val Accuracy: 70.05%
+Fine-Tune Epoch 2/3: 100%|█████████████████████████████████████████████████████████████████████████████████████████| 7543/7543 [10:36<00:00, 11.85it/s]
+Fine-Tune Epoch 2 | Train Loss: 0.9583 | Val Loss: 0.9281 | Val Accuracy: 70.09%
+Fine-Tune Epoch 3/3: 100%|█████████████████████████████████████████████████████████████████████████████████████████| 7543/7543 [10:38<00:00, 11.81it/s]
+Fine-Tune Epoch 3 | Train Loss: 0.9564 | Val Loss: 0.9275 | Val Accuracy: 70.11%
+
+72 in 194
+144 in 321
+206 in 450
+484 in 951
+728 in 2000
